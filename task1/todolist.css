@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(to right,yellow,lightblue,lightgreen,green);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: brown;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background: darkorchid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gainsboro;
+}
+
+.container {
+  position: relative;
+  max-width: 482px;
+  width: 100%;
+  border-radius: 7px;
+  padding: 24px;
+  margin: 84px auto 0;
+  background-color: gray;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+}
+.container .input-field {
+  position: relative;
+  height: 65px;
+  width: 100%;
+}
+.input-field textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 17px 44px 17px 14px;
+  border: 2px solid #aaa;
+  resize: none;
+}
+.input-field textarea:focus {
+  border-color: darkred;
+}
+textarea::-webkit-scrollbar {
+  display: none;
+}
+.input-field .note-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 25px;
+  color: navy;
+}
+.input-field textarea:focus ~ .note-icon {
+  color: orange;
+}
+.container .todoLists {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 11px;
+}
+.todoLists .list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: deepskyblue;
+  padding: 19px 14px;
+  border-radius: 9px;
+  margin-top: 9px;
+  position: relative;
+  cursor: pointer;
+  color: crimson;
+}
+.todoLists .list input {
+  height: 15px;
+  min-width: 15px;
+  accent-color: pink;
+  pointer-events: none;
+}
+.todoLists .list .task {
+  margin: 0 30px 0 15px;
+  word-break: break-all;
+}
+.list input:checked ~ .task {
+  text-decoration: line-through;
+}
+.todoLists .list i {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  font-size: 19px;
+  color: black;
+  padding: 6px;
+  opacity: 0.6;
+  display: none;
+}
+.todoLists .list:hover i {
+  display: inline-flex;
+}
+.todoLists .list i:hover {
+  opacity: 1;
+}
+.container .pending-tasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.pending-tasks span {
+  color: yellowgreen;
+  font-style: italic;
+  font-weight: bold;
+}
+.pending-tasks .clear-button {
+  padding: 5px 13px;
+  outline: none;
+  border: none;
+  background: lightseagreen;
+  color: black;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.clear-button:hover {
+  background-color: midnightblue;
+  color: aqua;
+}
+
+
+
+@media screen and (max-width: 350px) {
+  .container {
+    padding: 25px 10px;
+  }
+}
